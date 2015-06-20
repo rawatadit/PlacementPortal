@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="height: 146px; width:100%; border-bottom-style: outset; border-bottom-width: medium; background:lightblue">
+        <div style="height: 80%; width: 15%; margin:auto; margin-top:10px">
+
+            <asp:Image ID="Image1" runat="server" Height="137px" ImageUrl="~/img/MITLogo.png" Width="153px"/>
+
+        </div>
+        </div>
+
+    <div style="height: 60px; margin-top:20px; width: 932px">
+        <div style="height: 56px; width: 392px; margin:auto auto auto 457px">
+
+            <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" DataSourceID="SiteMapDataSource1" DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Verdana" Font-Size="1em" ForeColor="#666666" StaticDisplayLevels="2" StaticSubMenuIndent="10px">
+                <DynamicHoverStyle BackColor="#666666" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#E3EAEB" />
+                <DynamicSelectedStyle BackColor="LightGray" ForeColor="Black" />
+                <StaticHoverStyle ForeColor="Black" />
+                <StaticMenuItemStyle HorizontalPadding="10px" ItemSpacing="5px" VerticalPadding="15px" />
+                <StaticSelectedStyle BackColor="LightGray" />
+            </asp:Menu>
+
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+
+        </div>
+    </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            <p style="height: 487px">
+                <br />
+            </p>
+            
+        </asp:ContentPlaceHolder>
+    
+    <div style="margin: 10px; float: left; width: 100%;">
+        <div style="width: 300px; float:left">
+            <asp:Label ID="Label1" runat="server" Text="Copyright : Manipal Institute of Technology"></asp:Label>
+        </div>
+        <div style="width: 141px; float: right">
+            <asp:HyperLink ID="HyperLink1" runat="server" Text="Go to Admin Panel" NavigateUrl="~/admin/login.aspx"></asp:HyperLink>
+        </div>
+    </div>
+
+    </form>
+    
+    </body>
+</html>
